@@ -1,0 +1,22 @@
+---------Taking Latency Measurements on US /register---------
+
+Average Latency: 
+ 127.50318050384521
+---------Taking Latency Measurements on EU /register---------
+
+Average Latency: 
+ 361.71324253082275
+---------Taking Latency Measurements on US /list---------
+
+Average Latency: 
+ 118.27630996704102
+---------Taking Latency Measurements on EU /list---------
+
+Average Latency: 
+ 377.02012062072754
+---------Observing Eventual Consistency---------
+
+Misses: 
+ 0
+
+The 250ms latency gap between regions is because of the delay caused by the physical distance between my router and the data centers. The US instance is geographically much closer compared to the Europe instance, which needs to travel overseas. Since both /register and /get are around the same latencies for both instances, it’s safe to say that physical distance is the dominant factor for latency. Even though Firestore’s design is to be eventually consistent, I’ve had 0 misses over the 100 iterations. I did some research and I think it’s because Google’s backend can replicate the data faster than the python script could even query the users from the Europe instance.

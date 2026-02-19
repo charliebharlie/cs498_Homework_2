@@ -1,0 +1,13 @@
+Implementation Details:
+The project uses Node.js to host the server and Firestore for the database. Whenever a HTTP request comes in, depending on the request type, the Node.js server will interact with the Firestore database that I named 'hw2-pt2'. 
+
+File Structure:
+server.js: The server code deployed to both instances
+analysis.py: Script used to measure latency and consistency
+Team_HW2.txt: My netID.
+IPs.txt: A space-separated list of the external IP addresses of your two Cloud instances.
+Code_HW2.txt: A file describing your implementation and file structure.
+Analysis.txt:
+    The average latency measurements from Part IV-A.
+    The results from your eventual consistency experiment in Part IV-B (i.e., how many times the username was not found).
+    A brief (1–2 paragraph) discussion of your findings. Why do you think the latencies differ? What does your consistency experiment show?
