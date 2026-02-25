@@ -2,8 +2,8 @@ import requests
 import time
 import uuid
 
-US_IP = "34.121.182.32"
-EU_IP = "35.241.187.167"
+US_IP = "34.55.251.126"
+EU_IP = "34.38.104.133"
 
 
 def run_latency_test(name, url, method):
